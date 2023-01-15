@@ -8,12 +8,9 @@ body {
 .container {
 	width: 400px;
 	max-height: 600px;
-
 	display: flex;
-
 	flex-direction: column;
 	gap: 2rem;
-
 	background: #fff;
 	padding: 2rem;
 	margin-top: 100px;
@@ -36,7 +33,6 @@ body {
 .headerContent {
 	display: flex;
 	justify-content: space-between;
-
 	gap: 1rem;
 }
 
@@ -49,7 +45,7 @@ input {
 	height: 30px;
 	padding: 0 1rem;
 	font-family: "Open Sans", sans-serif;
-	border-radius: 10px;
+	border-radius: 3px;
 	border: none;
 	outline: none;
 	box-shadow: 0 1px 0 0;
@@ -80,7 +76,6 @@ ul li {
 	background: #eee;
 	font-size: 13px;
 	font-family: "Open Sans", sans-serif;
-	/* transition: 0.2s; */
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
