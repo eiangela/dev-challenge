@@ -66,7 +66,7 @@ function addTask() {
 			if (ev.target.tagName === "LI") {
 				ev.target.classList.toggle("checked");
 			}
-		},
+		}, 
 		false
 	);
 
