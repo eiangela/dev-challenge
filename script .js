@@ -66,16 +66,30 @@ function addTask() {
 			if (ev.target.tagName === "LI") {
 				ev.target.classList.toggle("checked");
 			}
-		}, 
+		},
 		false
 	);
 
-	for (i = 0; i < close.length; i++) {
-		close[i].onclick = function () {
-			var div = this.parentElement;
-			div.style.display = "none";
-		};
-	}
+	li.addEventListener(
+		"click",
+		function (ev) {
+			if (ev.target.tagName === "SPAN") {
+				if (li.className !== "checked") {
+					for (i = 0; i < close.length; i++) {
+						close[i].onclick = function () {
+							var div = this.parentElement;
+							div.style.display = "none";
+						};
+					}
+				} else {
+					alert(
+						"Não é possível excluir um item que já foi marcado como concluído"
+					);
+				}
+			}
+		},
+		false
+	);
 }
 
 var myNodelist = document.getElementsByTagName("ul");
@@ -90,9 +104,12 @@ for (i = 0; i < myNodelist.length; i++) {
 
 var close = document.getElementsByClassName("close");
 var i;
+
 for (i = 0; i < close.length; i++) {
 	close[i].onclick = function () {
 		var div = this.parentElement;
 		div.style.display = "none";
 	};
 }
+
+
